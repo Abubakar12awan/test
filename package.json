@@ -4,7 +4,8 @@
    "scripts": {
       "build": "tsc && cpx \"src/environment/**\" \"build/environment\"",
       "dev": "nodemon --exec ts-node src/index.ts",
-      "start": "ts-node src/index.ts"
+      "start": "node build/index.js",     
+      "heroku-postbuild": "npm run build"
    },
    "dependencies": {
       "bcrypt": "^5.1.1",
